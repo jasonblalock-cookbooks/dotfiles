@@ -15,4 +15,5 @@ git "/home/#{username}/.dotfiles" do
   user username
   group username
   environment 'HOME' => "/home/#{username}"
+  only_if { "getent passwd #{username}" && File.exists?("/home/#{username}") }
 end
