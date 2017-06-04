@@ -4,7 +4,7 @@
 #
 # Copyright (c) 2016 Jason Blalock, All Rights Reserved.
 
-include_recipe 'git::default'
+include_recipe 'git_ppa::default'
 
 username = node['dotfiles']['user']
 
